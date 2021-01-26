@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" stylesheets="@../Css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminPanelController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="517.0" prefWidth="201.0" styleClass="Bcolor" stylesheets="@../Css/system.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="114.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+                  <Separator prefHeight="0.0" prefWidth="178.0" style="-fx-background-color: white;" />
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="132.0" onAction="#DashBoard" prefHeight="50.0" prefWidth="200.0" styleClass="btnUser" text="DashBoard" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="20" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#SwitchToCreateUser" prefHeight="50.0" prefWidth="200.0" styleClass="btnUser" text="Create User" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="20" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="188.0" onAction="#SwitchToAdminSection" prefHeight="50.0" prefWidth="200.0" styleClass="btnUser" text="Admin Settings" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="25" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="228.0" onAction="#SwitchToHelpSupport" prefHeight="50.0" prefWidth="200.0" styleClass="btnUser" text="Help &amp; Support" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="QUESTION_CIRCLE" size="25" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <Separator layoutX="10.0" layoutY="124.0" prefHeight="0.0" prefWidth="201.0" style="-fx-background-color: white;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="222.0" onAction="#LogOutAction" prefHeight="50.0" prefWidth="200.0" styleClass="btnUser" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="25" wrappingWidth="30.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="272.0" onAction="#ExitSystemAction" prefHeight="50.0" prefWidth="200.0" styleClass="btnUser" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE_ALT" size="25" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="3.0" top="2.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="switch_stackpane" prefHeight="570.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="4.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </StackPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="60.0" prefWidth="1300.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="1300.0" styleClass="toolbar" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="3.0" />
+               </BorderPane.margin>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Section | Logged In As |  ">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="labelUsername" prefHeight="23.0" prefWidth="311.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

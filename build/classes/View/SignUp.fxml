@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" stylesheets="@../Css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="200.0">
+         <children>
+            <Pane layoutX="5.0" layoutY="5.0" prefHeight="588.0" prefWidth="350.0" styleClass="root">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="BLACK" labelFloat="true" layoutX="16.0" layoutY="77.0" maxWidth="322.0" minWidth="236.0" prefHeight="40.0" prefWidth="322.0" promptText="Username">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="16.0" layoutY="158.0" maxWidth="322.0" minWidth="236.0" prefHeight="40.0" prefWidth="322.0" promptText="Email">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="BLACK" labelFloat="true" layoutX="16.0" layoutY="241.0" maxWidth="322.0" minWidth="322.0" prefHeight="40.0" prefWidth="322.0" promptText="Password">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="confirm_password" focusColor="BLACK" labelFloat="true" layoutX="16.0" layoutY="327.0" maxWidth="322.0" minWidth="322.0" prefHeight="40.0" prefWidth="322.0" promptText="Confirm_Password">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="115.0" layoutY="521.0" onAction="#RegisterAdmin" prefHeight="33.0" prefWidth="120.0" styleClass="btnNeutral" text="Save">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXComboBox fx:id="userTypeCombo" layoutX="23.0" layoutY="424.0" prefHeight="40.0" prefWidth="308.0" promptText="User_Type" styleClass="combo" />
+                  <Text layoutX="86.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create An Admin Account ">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="27.0" layoutY="40.0" prefHeight="4.0" prefWidth="301.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

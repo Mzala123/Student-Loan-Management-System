@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="MainStackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../Css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditStudentDetailsController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="firstAnchorpane" layoutX="16.0" layoutY="58.0" minWidth="340.0" prefHeight="520.0" prefWidth="340.0" style="-fx-background-color: #e7e7e7;">
+               <children>
+                  <JFXTextField fx:id="studentID" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="40.0" maxWidth="211.0" minWidth="320.0" prefHeight="45.0" prefWidth="211.0" promptText="Student Id">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="studentName" focusColor="BLACK" labelFloat="true" layoutX="10.0" layoutY="133.0" maxWidth="211.0" minWidth="320.0" prefHeight="45.0" prefWidth="211.0" promptText="Student Name">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="10.0" layoutY="237.0" maxWidth="211.0" minWidth="320.0" prefHeight="45.0" prefWidth="211.0" promptText="Email">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="number" focusColor="BLACK" labelFloat="true" layoutX="10.0" layoutY="335.0" maxWidth="211.0" minWidth="320.0" prefHeight="45.0" prefWidth="211.0" promptText="Contact Number">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="comboGender" layoutX="18.0" layoutY="438.0" minHeight="45.0" prefHeight="25.0" prefWidth="305.0" promptText="Gender" styleClass="combo" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="secondAnchorpane" layoutX="379.0" layoutY="58.0" minWidth="340.0" prefHeight="520.0" prefWidth="340.0" style="-fx-background-color: #e7e7e7;">
+               <children>
+                  <JFXComboBox fx:id="comboEnrol" layoutX="18.0" layoutY="34.0" prefHeight="45.0" prefWidth="305.0" promptText="Enrollment Year" styleClass="combo" />
+                  <JFXComboBox fx:id="comboYearStudy" layoutX="18.0" layoutY="167.0" prefHeight="45.0" prefWidth="305.0" promptText="Year Of Study" styleClass="combo" />
+                  <JFXComboBox fx:id="comboDuration" layoutX="18.0" layoutY="301.0" prefHeight="45.0" prefWidth="305.0" promptText="Duration" styleClass="combo" />
+                  <JFXComboBox fx:id="comboProgramme" layoutX="18.0" layoutY="440.0" prefHeight="45.0" prefWidth="305.0" promptText="Faculty [Programme]" styleClass="combo" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ThirdAnchorpane" layoutX="742.0" layoutY="58.0" minWidth="340.0" prefHeight="520.0" prefWidth="340.0" style="-fx-background-color: #e7e7e7;">
+               <children>
+                  <Pane layoutX="20.0" prefHeight="300.0" prefWidth="300.0" styleClass="toolbar">
+                     <children>
+                        <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <JFXTextArea fx:id="imagePath" labelFloat="true" layoutX="10.0" layoutY="365.0" maxWidth="320.0" minWidth="320.0" prefHeight="45.0" prefWidth="327.0" promptText="File Path">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </JFXTextArea>
+                  <Button layoutX="70.0" layoutY="305.0" mnemonicParsing="false" onAction="#InsertNewImageAction" prefHeight="46.0" prefWidth="200.0" styleClass="btnNeutral" text="Change Image">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/photos.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="445.0" mnemonicParsing="false" onAction="#UpdateStudentRectionAction" prefHeight="48.0" prefWidth="149.0" styleClass="btnNeutral" text="Confirm">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="180.0" layoutY="445.0" mnemonicParsing="false" onAction="#CloseUpdateSection" prefHeight="48.0" prefWidth="149.0" styleClass="btncancel" text="Close">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="headerAnchorPane" layoutX="1.0" layoutY="-1.0" prefHeight="46.0" prefWidth="1100.0" styleClass="Bcolor">
+               <children>
+                  <Text fill="WHITE" layoutX="438.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update a Student Record">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

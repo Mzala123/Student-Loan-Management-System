@@ -1,0 +1,27 @@
+.rootpane
+{
+  -fx-background-color: #f4f4f4;
+  -fx-font-size:16px;  
+}
+.root
+{
+  
+  -fx-background-color: #f4f4f4;   
+  -fx-border-radius:4.0px;
+  -fx-background-radius:4.0px;
+  -fx-effect: dropshadow(gaussian,rgb(0.0,0.0,0.0,0.15),6.0,0.7,0.0,1.5);
+}
+.pane
+{
+-fx-background-color: linear-gradient(to top right,#0159a1, #8ba4b9);
+}
+.button
+{
+    -fx-background-radius:35px ;
+    -fx-border-radius:35px ;
+    -fx-background-color: linear-gradient(to top right,#15415a,#7ba1b8);
+   
+    -fx-font-weight:bold;
+    -fx-font-size:15px;
+    -fx-text-fill:white;
+}

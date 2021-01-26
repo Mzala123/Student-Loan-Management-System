@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox alignment="TOP_RIGHT" prefHeight="70.0" prefWidth="782.0" styleClass="toolbar" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXHamburger fx:id="ham" prefHeight="70.0" prefWidth="65.0" styleClass="ham">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </JFXHamburger>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <left>
+            <JFXDrawer fx:id="drawer" prefHeight="600.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+            </JFXDrawer>
+         </left>
+         <center>
+            <Group BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="427.0" prefWidth="345.0" styleClass="pane">
+                     <children>
+                        <Pane prefHeight="96.0" prefWidth="345.0" styleClass="toolbar">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="123.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Login.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <JFXTextField fx:id="username" focusColor="BLACK" labelFloat="true" layoutX="45.0" layoutY="183.0" maxWidth="259.0" minWidth="260.0" prefHeight="40.0" prefWidth="260.0" promptText="Username">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="password" focusColor="BLACK" labelFloat="true" layoutX="45.0" layoutY="255.0" maxWidth="263.0" minWidth="260.0" onAction="#EnterOnLogin" prefHeight="40.0" prefWidth="260.0" promptText="Password">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXButton contentDisplay="RIGHT" layoutX="110.0" layoutY="338.0" onAction="#LogIntoTheSystem" prefHeight="37.0" prefWidth="120.0" styleClass="btnNeutral" text="Login">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_IN" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <Text layoutX="52.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Or Sign up to Create a New Account">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="label_prompt" layoutX="52.0" layoutY="309.0" prefHeight="17.0" prefWidth="243.0" textFill="RED">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView glyphName="LOCK" layoutX="274.0" layoutY="281.0" size="20" />
+                        <FontAwesomeIconView glyphName="USER" layoutX="272.0" layoutY="211.0" size="20" />
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+         </center>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../Css/Login.css" />
+      <URL value="@../Css/system.css" />
+   </stylesheets>
+</StackPane>

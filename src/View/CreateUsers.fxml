@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1100.0" stylesheets="@../Css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateUsersController">
+   <children>
+      <AnchorPane prefHeight="580.0" prefWidth="1100.0" styleClass="pane">
+         <children>
+            <Separator layoutX="352.0" layoutY="3.0" orientation="VERTICAL" prefHeight="580.0" prefWidth="6.0" />
+            <Separator layoutX="726.0" layoutY="2.0" orientation="VERTICAL" prefHeight="580.0" prefWidth="6.0" />
+            <Pane layoutX="355.0" prefHeight="52.0" prefWidth="371.0" styleClass="pane">
+               <children>
+                  <Text layoutX="137.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER USER">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <JFXTextField fx:id="userid" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="86.0" maxWidth="314.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="User Id (Mandatory)">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="username" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="182.0" maxWidth="314.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Username (Mandatory)">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="fname" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="302.0" maxWidth="314.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Firstname">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="sname" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="418.0" maxWidth="314.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Surname">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="BLACK" labelFloat="true" layoutX="387.0" layoutY="83.0" maxWidth="178.0" minWidth="320.0" prefHeight="45.0" prefWidth="178.0" promptText="Password (Mandatory)">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="387.0" layoutY="182.0" maxWidth="191.0" minWidth="320.0" prefHeight="45.0" prefWidth="191.0" promptText="Email (Mandatory)">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="usertype" layoutX="387.0" layoutY="298.0" prefHeight="45.0" prefWidth="320.0" promptText="User Type (Mandatory)" />
+            <JFXDatePicker fx:id="date" defaultColor="#0159a1" layoutX="381.0" layoutY="418.0" prefHeight="45.0" prefWidth="320.0" promptText="Date Included (Mandatory)" />
+            <Pane layoutX="755.0" layoutY="7.0" prefHeight="300.0" prefWidth="300.0" styleClass="pane">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <JFXTextArea fx:id="filepath" focusColor="BLACK" layoutX="745.0" layoutY="396.0" maxWidth="356.0" minWidth="300.0" prefHeight="52.0" prefWidth="320.0" promptText="File Path">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton layoutX="805.0" layoutY="325.0" onAction="#InsertImageAction" prefHeight="45.0" prefWidth="200.0" styleClass="btnNeutral" text="Insert User Image">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILE_IMAGE_ALT" size="20" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="745.0" layoutY="474.0" onAction="#RegisterUserAction" prefHeight="45.0" prefWidth="140.0" styleClass="btnNeutral" text="Create">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="925.0" layoutY="474.0" onAction="#CancelUserRegistration" prefHeight="45.0" prefWidth="140.0" styleClass="btncancel" text="Cancel">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

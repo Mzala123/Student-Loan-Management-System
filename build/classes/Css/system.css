@@ -1,0 +1,238 @@
+.sideMenu
+{
+    -fx-background-color: #243a51;
+}
+.btnUser
+{
+    /*-fx-background-color: linear-gradient(to top right,#15415a,#7ba1b8);*/
+    -fx-background-color:#0159a1; 
+    -fx-border-radius:2.0px;
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+    -fx-text-fill:whitesmoke;
+    -fx-cursor:hand;
+    -fx-pref-height:50px;
+    -fx-pref-width:200px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.btnUser:hover
+{
+    -fx-background-color:#81b3d6;
+}
+.toolbar
+{
+     -fx-background-color: linear-gradient(to top right,#8ba4b9, #0159a1);
+}
+.ham
+{
+    -fx-spacing:4px;
+    
+}
+.ham StackPane 
+{
+   -fx-background-color:white;
+   -fx-pref-width:30px;
+   -fx-background-radius:5px;
+}
+.pane{
+ -fx-background-color: #ffffff;
+  -fx-border-color:whitesmoke;  
+  -fx-border-radius:4.0px;
+  -fx-background-radius:4.0px;
+  -fx-effect: dropshadow(gaussian,rgb(0.0,0.0,0.0,0.15),6.0,0.7,0.0,1.5);
+}
+
+
+.NEWPANE{
+ /*-fx-background-color: #ffffff;*/
+  -fx-border-color:whitesmoke;  
+  -fx-border-radius:4.0px;
+  -fx-background-radius:4.0px;
+  -fx-effect: dropshadow(gaussian,rgb(0.0,0.0,0.0,0.15),6.0,0.7,0.0,1.5);
+}
+
+
+.btnsave{
+     -fx-background-color: linear-gradient(to top right,#15415a,#7ba1b8);
+    -fx-border-radius:2.0px;
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+    -fx-text-fill:whitesmoke;
+    -fx-cursor:hand;
+    -fx-pref-height:60px;
+    -fx-pref-width:130px;
+    -fx-alignment: CENTER;
+    
+}
+.btncancel
+{
+    -fx-background-color: linear-gradient(to top right,#b12020,#ea9084);
+    -fx-border-radius:2.0px;
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+    -fx-text-fill:whitesmoke;
+    -fx-cursor:hand;
+    -fx-alignment: CENTER;
+    
+}
+.btncancel:hover
+{
+    -fx-background-color: #e08888;
+}
+.Bcolor{
+    /*-fx-background-color: linear-gradient(to top right,#0159a1, #8ba4b9);*/
+   -fx-background-color: #0159a1;
+}
+file
+{
+     -fx-text-fill:white; 
+}
+.btnNeutral
+{
+    -fx-background-color: linear-gradient(to top right,#0159a1,#8ba4b9);
+    -fx-border-radius:2.0px;
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+    -fx-text-fill:whitesmoke;
+    -fx-cursor:hand;
+    -fx-alignment: CENTER;
+    
+}
+.btnNeutral:hover
+{
+    -fx-background-color: #73afea;
+}
+
+.combo
+{
+    -fx-font-size:14px;
+    -fx-font-family: Century Gothic;
+}
+
+.ham
+{
+    -fx-spacing:4px;
+    
+}
+.ham StackPane 
+{
+   -fx-background-color:white;
+   -fx-pref-width:30px;
+   -fx-background-radius:5px;
+}
+
+.btnReports
+{
+    -fx-background-color: linear-gradient(to top right,#ffffff,#ffffff);
+    -fx-border-radius:2.0px;
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+   /* -fx-text-fill:whitesmoke;*/
+    -fx-cursor:hand;
+    -fx-alignment: CENTER;
+    
+}
+.btnReports:hover
+{
+    -fx-background-color: #e7e3e3;
+    -fx-border-color:grey;
+    -fx-border-radius:2.0px;
+}
+.depthManager
+{
+    -fx-background-color: linear-gradient(to top right,#0aaa6e,#bdf1dd);
+}
+.btnFancy
+{
+    -fx-background-color: linear-gradient(to top right,#0aaa6e,#bdf1dd);
+    -fx-border-radius:20.0px;
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+    -fx-text-fill:whitesmoke;
+    -fx-cursor:hand;
+    -fx-alignment: CENTER;
+    
+}
+.btnFancy:hover
+{
+    -fx-background-color: #bdf1dd;
+}
+.jfx-tab-pane.tab-header-background
+{
+    -fx-background-color: linear-gradient(to top right,#0159a1,#8ba4b9);
+}
+/*.jfx-tab-pane .headers-region
+{
+-fx-background-color: #0159a1;
+}*/
+
+.jfx-tab-pane .tab-header-background
+{
+-fx-background-color: linear-gradient(to top right,#0159a1,#8ba4b9);
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler
+{
+-jfx-rippler-fill: orange;
+}
+
+.jfx-tab-pane .tab-header-area .tab-selected-line
+{
+-fx-stroke: #0aaa6e;
+}
+
+
+
+
+
+
+.tab-pane.tab-header-background
+{
+    -fx-background-color: linear-gradient(to top right,#0159a1,#8ba4b9);
+}
+.tab-pane .headers-region-background
+{
+-fx-background-color: #0159a1;
+}
+
+.tab-pane .tab-header-background
+{
+-fx-background-color: linear-gradient(to top right,#0159a1,#8ba4b9);
+}
+
+.tab-pane .tab-header-area .jfx-rippler
+{
+-jfx-rippler-fill: orange;
+}
+
+.tab-pane .tab-header-area .tab-selected-line
+{
+-fx-stroke: #0aaa6e;
+}
+
+
+.BtnBack
+{
+    -fx-background-color: linear-gradient(to top right,#ffffff,#ffffff);
+    -fx-background-radius:2.0px;
+    -fx-border-width:0px;
+    -fx-border-style:none;
+    -fx-text-fill:black;
+    -fx-cursor:hand;
+    -fx-alignment: CENTER;
+    -fx-border-radius:40.0px;
+    -fx-background-radius:40.0px; 
+}
+.BtnBack:hover
+{
+    -fx-background-color: #e7e3e3;
+    -fx-border-color:grey;
+    -fx-border-radius:2.0px;
+}

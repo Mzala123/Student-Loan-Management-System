@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.gauge.linear.BasicRoundDailGauge?>
+<?import jfxtras.scene.control.gauge.linear.SimpleMetroArcGauge?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1000.0" stylesheets="@../Css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoardController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox prefHeight="10000.0" prefWidth="978.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="10000.0" prefWidth="10000.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/users-1.png" />
+                                 </image>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total No of Students">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label fx:id="lblTotalStudents" alignment="CENTER" prefHeight="75.0" prefWidth="150.0" text="Label">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0">
+                           <HBox.margin>
+                              <Insets bottom="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="15.0" prefHeight="10000.0" prefWidth="10000.0">
+                           <children>
+                              <SimpleMetroArcGauge fx:id="malesGauge" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Males">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <Separator layoutX="180.0" layoutY="50.0" orientation="VERTICAL" prefHeight="200.0">
+                           <HBox.margin>
+                              <Insets bottom="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox alignment="CENTER" layoutX="206.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0">
+                           <children>
+                              <SimpleMetroArcGauge fx:id="femalesGauge" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Females">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="10000.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="10000.0" prefWidth="10000.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/incoming.png" />
+                                 </image>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Applied Loan Students">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Label fx:id="lblTotalApplied" text="Label">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0">
+                           <HBox.margin>
+                              <Insets bottom="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0">
+                           <children>
+                              <BasicRoundDailGauge fx:id="onLoanGauge" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\% of Students OnLoan">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="163.0" layoutY="50.0" orientation="VERTICAL" prefHeight="200.0">
+                           <HBox.margin>
+                              <Insets bottom="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox alignment="CENTER" layoutX="169.0" layoutY="10.0" prefHeight="10000.0" prefWidth="10000.0">
+                           <children>
+                              <BasicRoundDailGauge fx:id="returnedGauge" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\% Students Returned Loan">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

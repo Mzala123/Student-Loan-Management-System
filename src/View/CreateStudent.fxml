@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stackpane" prefHeight="570.0" prefWidth="1100.0" stylesheets="@../Css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateStudentController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+         <center>
+            <StackPane BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                     <children>
+                        <Separator layoutX="366.0" layoutY="7.0" orientation="VERTICAL" prefHeight="570.0" />
+                        <Separator layoutX="742.0" layoutY="6.0" orientation="VERTICAL" prefHeight="570.0" />
+                        <JFXTextField fx:id="studentId" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="73.0" maxWidth="194.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Student ID [Mandatory]">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="studentname" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="174.0" maxWidth="194.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Student Name [Mandatory]">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="288.0" maxWidth="194.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Email Address [Mandatory]">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="phonenumber" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="404.0" maxWidth="194.0" minWidth="320.0" prefHeight="45.0" prefWidth="320.0" promptText="Student Phonenumber [Mandatory]">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Pane fx:id="pane" layoutX="367.0" prefHeight="97.0" prefWidth="377.0" style="-fx-background-color: #e7e7e7;">
+                           <children>
+                              <Text layoutX="78.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT REGISTRATION SECTION">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <JFXComboBox fx:id="enrolyear" layoutX="395.0" layoutY="167.0" prefHeight="45.0" prefWidth="320.0" promptText="Enrollment Year" styleClass="combo" />
+                        <JFXComboBox fx:id="studyyear" layoutX="395.0" layoutY="282.0" prefHeight="45.0" prefWidth="320.0" promptText="Year of Study" styleClass="combo" />
+                        <JFXComboBox fx:id="duration" layoutX="395.0" layoutY="397.0" prefHeight="45.0" prefWidth="320.0" promptText="Duration" styleClass="combo" />
+                        <JFXComboBox fx:id="programme" layoutX="395.0" layoutY="503.0" prefHeight="45.0" prefWidth="320.0" promptText="Faculty [Programme of Study]" styleClass="combo" />
+                        <Pane layoutX="773.0" layoutY="10.0" prefHeight="300.0" prefWidth="300.0" styleClass="pane">
+                           <children>
+                              <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="300.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <JFXButton buttonType="RAISED" layoutX="823.0" layoutY="330.0" onAction="#InsertStudentImageFunction" prefHeight="45.0" prefWidth="200.0" styleClass="btnNeutral" text="Insert Student Profile">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE_IMAGE_ALT" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextArea fx:id="imagepath" focusColor="BLACK" layoutX="763.0" layoutY="394.0" maxWidth="301.0" minWidth="320.0" prefHeight="50.0" prefWidth="320.0" promptText="File Path">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXButton buttonType="RAISED" layoutX="763.0" layoutY="504.0" onAction="#RegisterStudentAction" prefHeight="44.0" prefWidth="140.0" styleClass="btnNeutral" text="Register">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="933.0" layoutY="504.0" onAction="#ClearFieldsAction" prefHeight="44.0" prefWidth="140.0" styleClass="btncancel" text="Clear">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SCISSORS" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXComboBox fx:id="gender" layoutX="32.0" layoutY="503.0" prefHeight="45.0" prefWidth="305.0" promptText="Gender" styleClass="combo" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
